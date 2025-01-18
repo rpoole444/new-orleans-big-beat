@@ -22,7 +22,7 @@ export default function HomePage() {
         </h2>
         <p className="text-lg text-gray-300 text-center mt-4 px-8 leading-relaxed">
           We are a high-energy band bringing the vibrant rhythms and soulful grooves of New Orleans to every stage we grace. From funk to rhythm and blues, traditional jazz, and brass band classics, our music is a celebration of the rich musical legacy that defines the Big Easy.
-          Inspired by icons like Nigel Hall, John Cleary, Dr. John, and the Preservation Hall Jazz Band, we blend heartfelt melodies with infectious beats that get everyone on their feet. With co-leaders, drummer, Tim Stombaugh and trumpeter, Reid Poole at the helm, joined by guitarist Matt Horanzy, pianist Steve Denny, and our incredible bassist Paul McDaniel, we feature some of the finest musicians in Colorado.
+          Inspired by icons like Nigel Hall, John Cleary, Dr. John, and the Preservation Hall Jazz Band, we blend heartfelt melodies with infectious beats that get everyone on their feet. With co-leaders, drummer, Tim Stombaugh, trumpeter, Reid Poole and guitarist Matt Horanzy at the helm, joined by pianist Steve Denny, and our incredible bassist Paul McDaniel, we feature some of the finest musicians in Colorado.
           You may have caught us lighting up the dance floor at the Axe and Oak in Colorado Springs or bringing the party to life at the Hotel Chamonix in Cripple Creek. Wherever we play, we promise a show full of passion, joy, and unforgettable moments.
           Ready to experience the magic of New Orleans? Let’s dance!
         </p>

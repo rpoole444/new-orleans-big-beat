@@ -2,7 +2,7 @@ import Image from 'next/image';
 import ReidImage from "../../../public/bandmembers/Reid.jpg"
 import SteveImage from "../../../public/bandmembers/Steve.jpg"
 import PaulImage from "../../../public/bandmembers/Paul.jpg"
-import TimImage from "../../../public/bandmembers/Tim's Drums.jpg"
+import TimImage from "../../../public/bandmembers/Tim.jpg"
 import MattImage from "../../../public/bandmembers/Matt.jpg"
 
 export default function BandPage() {

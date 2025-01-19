@@ -70,7 +70,7 @@ export default function BandPage() {
     <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
       <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>
       <div className="space-y-12">
-        {members.map((member, index) => (
+        {members.map((member) => (
           <div
             key={member.id}
             className="bg-gray-800 rounded-lg shadow-md p-6 mb-6"

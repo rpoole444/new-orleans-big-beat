@@ -62,7 +62,7 @@ export default function BandPage() {
   ];
 
   const handleToggle = (id:number) => {
-    setActiveToggle((prevToggle => 
+    setActiveToggle((prevToggle) => 
     prevToggle.includes(id) ? prevToggle.filter((i:number) => i != id) : [...prevToggle, id]);
   };
   

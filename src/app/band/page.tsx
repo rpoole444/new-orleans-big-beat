@@ -3,13 +3,13 @@ import ReidImage from "../../../public/bandmembers/Reid.jpg"
 import SteveImage from "../../../public/bandmembers/Steve.jpg"
 import PaulImage from "../../../public/bandmembers/Paul.jpg"
 import TimImage from "../../../public/bandmembers/Tim.jpg"
-import MattImage from "../../../public/bandmembers/Matt.jpg"
+import MattImage from "../../../public/bandmembers/Matt.jpeg"
 
 export default function BandPage() {
   const members = [
     {
       name: "Tim Stombaugh",
-      bio: "Space for Tim Stombaugh’s biography.",
+      bio: "Tim Stombaugh is a versatile percussionist, vocalist, and leader of the New Orleans Big Beat, renowned for his dynamic drumming and captivating performances. Originally from Port Orange, Florida, Tim earned a Bachelor of Music in Jazz Studies from the University of North Florida, where he performed with esteemed faculty and jazz legends like Bunky Green, Ernie Watts, and Conrad Herwig. An endorsed artist with Canopus Drums, he has toured with Alligator Records artists JJ Grey and Mofro and performed with the legendary Count Basie Orchestra. Tim’s distinguished musical career also includes his role as Director of Operations and percussionist with the United States Air Force Academy Band, where he has performed across the globe, supporting troop morale and diplomatic missions. Balancing his military achievements with his passion for jazz, Tim brings an exceptional depth of experience and artistry to every performance with the New Orleans Big Beat.",
       image: TimImage, // Replace with the actual image path
     },
     {
@@ -19,12 +19,12 @@ export default function BandPage() {
     },
     {
       name: "Matt Horanzy",
-      bio: "Space for Matt Horanzy’s biography.",
+      bio: "Matt Horanzy is a guitarist living in Colorado Springs. He has lived and worked in Connecticut, Washington DC, and Tampa Florida before moving to Colorado where he currently performs with the United Stated Air Force Academy Band Falconaires. Matt is an award winning composer and arranger whose works have been performed by the New York Jazz Orchestra, the Airmen of Note, the New York Youth Symphony, and more. Matt is on faculty at Colorado College where he teaches guitar.",
       image: MattImage, // Replace with the actual image path
     },
     {
       name: "Steve Denny",
-      bio: "Space for Steve Denny’s biography.",
+      bio: "Steve Denny is an exquisitely emotive and versatile pianist, composer, and educator from Denver, Colorado, who creates indelible musical portraits through masterful virtuosity and touch. His expansive versatility spans jazz, classical, R&B, gospel, and beyond. Steve was a finalist in the prestigious Jacksonville Jazz Piano Competition in 2012 and 2015, and as a member of the University of Northern Colorado’s Lab Band I, he received a Downbeat Magazine award in 2008. He has performed in diverse settings, from New Orleans-style funk gigs to cabaret performances and gospel churches. As the leader of the Steve Denny Trio, he has released acclaimed albums, including Life in the Basement and Life in New York, which receive international airplay. With over fifteen years of teaching experience, Steve has taught piano at community colleges, music schools, and through private lessons. He holds a Bachelor of Arts in Music from Loyola University Chicago and a Master of Music in Jazz Studies from the University of Northern Colorado.",
       image: SteveImage, // Replace with the actual image path
     },
     {

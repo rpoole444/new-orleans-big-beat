@@ -29,7 +29,7 @@ export default function BandPage() {
     },
     {
       name: "Paul McDaniel",
-      bio: "Space for Paul McDaniel’s biography.",
+      bio: "Paul McDaniel has been one of the premier Bass guitarists in the Colorado area for 30 years. His versatility,deep groove, and creative edge keep him in high demand with a wide range of ensembles and composers. Paul is able to command many different styles while maintaining a strong personal voice on the instrument. Growing up in a highly diverse musical household, Paul was exposed to a huge variety of genres. After years of classical piano training, he found his calling with bass at the age of 11, an instrument he quickly excelled at. He began playing professionally at the age of 14. In his years playing music, Paul has played with diverse artists and ensembles as: The Motet,Kyle Hollingsworth Band,Henry Butler, Conjunto Colores, and Opie Gone Bad. In addition to his work in Colorado, Paul has toured throughout the US, Europe, Mexico, and the Caribbean.",
       image: PaulImage, // Replace with the actual image path
     },
   ];

@@ -3,7 +3,7 @@ import Image from "next/image";
 import bandIcon from "../../public/Colorado Springs.jpg"
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white py-4">
+    <nav className="bg-gray-900 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="shadow-lg rounded">
           <Link href="/">

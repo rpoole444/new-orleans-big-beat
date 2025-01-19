@@ -67,13 +67,13 @@ export default function BandPage() {
   };
   
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
+    <div className="bg-gray-800 text-white min-h-screen py-10 px-6">
       <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>
       <div className="space-y-12">
         {members.map((member) => (
           <div
             key={member.id}
-            className="bg-gray-800 rounded-lg shadow-md p-6 mb-6"
+            className="bg-gray-600 rounded-lg shadow-md p-6 mb-6 border border-gray-300"
           >
             {/* Top row: Photo, name/instrument, and toggle button */}
             <div className="flex items-center justify-around m-8">
@@ -97,7 +97,7 @@ export default function BandPage() {
               {/* SVG Icon */}
               <div
                 onClick={() => handleToggle(member.id)}
-                className={`cursor-pointer m-8 transform transition-transform duration-300 ${
+                className={`cursor-pointer m-3 transform transition-transform duration-300 ${
                   activeToggle.includes(member.id) ? "rotate-90" : ""
                 }`}
               >
@@ -106,6 +106,7 @@ export default function BandPage() {
                   alt={`${member.instrument} icon`}
                   width={150}
                   height={100}
+                  className="bg-gray-500 rounded-lg shadow-md p-6 mb-3 border border-gray-300"
                 />
               </div>
               {/* Open/Close Text */}
@@ -119,7 +120,7 @@ export default function BandPage() {
 
             {/* Bio in its own row. Only render if toggled */}
             {activeToggle.includes(member.id) && (
-              <div className="mt-12 text-gray-300 leading-relaxed">
+              <div className="mt-8 text-gray-300 leading-relaxed">
                 {member.bio}
               </div>
             )}

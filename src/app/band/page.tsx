@@ -97,7 +97,7 @@ export default function BandPage() {
               {/* SVG Icon */}
               <div
                 onClick={() => handleToggle(member.id)}
-                className={`cursor-pointer m-4 transform transition-transform duration-300 ${
+                className={`cursor-pointer m-8 transform transition-transform duration-300 ${
                   activeToggle.includes(member.id) ? "rotate-90" : ""
                 }`}
               >
@@ -110,9 +110,9 @@ export default function BandPage() {
               </div>
               {/* Open/Close Text */}
               {activeToggle.includes(member.id) ? (
-                <p className="text-sm text-gray-400">Close Bio</p>
+                <p className="text-m text-gray-400 ">Close Bio</p>
               ) : (
-                <p className="text-sm text-gray-400">Open Bio</p>
+                <p className="text-m text-gray-400">Open Bio</p>
               )}
             </div>
           </div>

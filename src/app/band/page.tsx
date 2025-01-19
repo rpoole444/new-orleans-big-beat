@@ -45,7 +45,7 @@ export default function BandPage() {
       id: 4,
       name: "Steve Denny",
       instrument: "Piano & Organ",
-      bio: "Steve Denny is an exquisitely emotive and versatile pianist, composer, and educator from Denver, Colorado, who creates indelible musical portraits through masterful virtuosity and touch. His expansive versatility spans jazz, classical, R&B, gospel, and beyond. Steve was a finalist in the prestigious Jacksonville Jazz Piano Competition in 2012 and 2015, and as a member of the University of Northern Colorado’s Lab Band I, he received a Downbeat Magazine award in 2008. He has performed in diverse settings, from New Orleans-style funk gigs to cabaret performances and gospel churches. As the leader of the Steve Denny Trio, he has released acclaimed albums, including Life in the Basement and Life in New York, which receive international airplay. With over fifteen years of teaching experience, Steve has taught piano at community colleges, music schools, and through private lessons. He holds a Bachelor of Arts in Music from Loyola University Chicago and a Master of Music in Jazz Studies from the University of Northern Colorado.",
+      bio: "An exquisitely emotive and multifaceted pianist, Steve Denny is an artist who creates indelible musical portraits through masterful virtuosity and touch. Born and raised in Denver, Colorado, Steve has applied his expansive versatility as a pianist, composer and educator to the realms of jazz, classical, r&b, gospel and beyond.  Steve was one of five finalists for the prestigious Jacksonville Jazz Piano Competition in 2012 and 2015, and as a member of the University of Northern Colorado’s Lab Band I, received a Downbeat Magazine award in 2008. Steve holds a Bachelor of Arts in music from Loyola University Chicago and a Master of Music in Jazz Studies from the University of Northern Colorado. Steve has released three albums with his trio, Life in the Basement; Life in New York and It’s Christmas Eve - available on all major platforms.",
       image: SteveImage, 
       active: false,
       icon:pianoIcon
@@ -65,22 +65,7 @@ export default function BandPage() {
     setActiveToggle((prevToggle:any) => 
     prevToggle.includes(id) ? prevToggle.filter((i:number) => i != id) : [...prevToggle, id]);
   };
-  const getToggleStyles = (instrument:string) => {
-    switch (instrument) {
-      case "Bandleader, Drums, & Vocals":
-        return "bg-blue-500 hover:bg-blue-600";
-      case "Trumpet & Vocals":
-        return "bg-yellow-500 hover:bg-yellow-600";
-      case "Guitar":
-        return "bg-red-500 hover:bg-red-600";
-      case "Piano & Organ":
-        return "bg-green-500 hover:bg-green-600";
-      case "Bass":
-        return "bg-purple-500 hover:bg-purple-600";
-      default:
-        return "bg-gray-500 hover:bg-gray-600";
-    }
-  };
+  
   return (
     <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
       <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>

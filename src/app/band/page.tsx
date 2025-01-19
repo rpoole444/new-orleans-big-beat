@@ -67,66 +67,65 @@ export default function BandPage() {
   };
   
   return (
-    <div className="bg-gray-800 text-white min-h-screen py-10 px-6">
-      <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>
-      <div className="space-y-12">
-        {members.map((member) => (
-          <div
-            key={member.id}
-            className="bg-gray-600 rounded-lg shadow-md p-6 mb-6 border border-gray-300"
-          >
-            {/* Top row: Photo, name/instrument, and toggle button */}
-            <div className="flex items-center justify-around m-8">
-              {/* Photo & Name/Instrument grouped together */}
-              <div className="flex items-center space-x-4">
-                <Image
-                  src={member.image}
-                  alt={`${member.name}'s Picture`}
-                  width={200}
-                  height={200}
-                  className="rounded-full shadow-lg"
-                />
-                <div>
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-sm text-gray-400">{member.instrument}</p>
-                </div>
+  <div className="bg-gray-800 text-white min-h-screen py-10 px-6">
+    <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>
+    <div className="space-y-12">
+      {members.map((member) => (
+        <div
+          key={member.id}
+          className="bg-gray-600 max-w-md mx-auto rounded-lg shadow-md p-6 mb-6 border border-gray-300"
+        >
+          {/* Top row: photo + name/instrument + toggle */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            
+            {/* Photo + Name/Instrument */}
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src={member.image}
+                alt={`${member.name}'s Picture`}
+                width={150}
+                height={150}
+                className="rounded-full shadow-lg"
+              />
+              <div className="mt-2">
+                <h3 className="text-xl font-bold">{member.name}</h3>
+                <p className="text-sm text-gray-400">{member.instrument}</p>
               </div>
+            </div>
 
-            {/* SVG Icon with Open/Close text below */}
-            <div className="flex flex-col items-center space-y-2">
-              {/* SVG Icon */}
+            {/* Toggle icon + Open/Close text */}
+            <div className="flex flex-col items-center text-center">
               <div
                 onClick={() => handleToggle(member.id)}
-                className={`cursor-pointer m-3 transform transition-transform duration-300 ${
+                className={`cursor-pointer transform transition-transform duration-300 ${
                   activeToggle.includes(member.id) ? "rotate-90" : ""
                 }`}
               >
                 <Image
                   src={member.icon}
                   alt={`${member.instrument} icon`}
-                  width={150}
-                  height={100}
-                  className="bg-gray-500 rounded-lg shadow-md p-6 mb-3 border border-gray-300"
+                  width={80}
+                  height={80}
+                  className="bg-gray-500 rounded-lg shadow-md p-4 border border-gray-300"
                 />
               </div>
-              {/* Open/Close Text */}
               {activeToggle.includes(member.id) ? (
-                <p className="text-m text-gray-400 ">Close Bio</p>
+                <p className="text-m text-gray-400 mt-2">Close Bio</p>
               ) : (
-                <p className="text-m text-gray-400">Open Bio</p>
+                <p className="text-m text-gray-400 mt-2">Open Bio</p>
               )}
             </div>
           </div>
 
-            {/* Bio in its own row. Only render if toggled */}
-            {activeToggle.includes(member.id) && (
-              <div className="mt-8 text-gray-300 leading-relaxed">
-                {member.bio}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          {/* Bio content (only if toggled) */}
+          {activeToggle.includes(member.id) && (
+            <div className="mt-8 text-gray-300 leading-relaxed text-center">
+              {member.bio}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }

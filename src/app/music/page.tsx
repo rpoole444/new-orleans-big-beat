@@ -2,25 +2,33 @@ export default function MusicPage() {
   const videos = [
     {
       id: 1,
-      embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_1",
-      description: "This is a description of video 1. It features an amazing performance by the band.",
+      embedUrl: "https://www.youtube.com/embed/MqynNzRBlU4?si=qIMbddUo1aHeePFK",
+      description: "Hey Pocky-a-way by The Meters",
     },
     {
       id: 2,
-      embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_2",
-      description: "This is a description of video 2. Enjoy a unique blend of rhythm and melody.",
+      embedUrl: "https://www.youtube.com/embed/82xL5wz3W_A?si=zhSMdkGfPkZTA5EW",
+      description: "St. James Infirmary",
     },
     {
       id: 3,
-      embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
-      description: "This is a description of video 3. A captivating musical experience awaits.",
+      embedUrl: "https://www.youtube.com/embed/dEUheEidfKw?si=JDclkCp0PUunrNXM",
+      description: "Sometimes I Wonder by Jon Cleary",
     },
     {
       id: 4,
-      embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4",
-      description: "This is a description of video 4. A spectacular showcase of our latest music.",
+      embedUrl: "https://www.youtube.com/embed/yGi_pyZp6z4?si=QWOxAsFHkzh2oVU8",
+      description: "Down in New Orleans",
     },
   ];
+
+  const personnel = `
+    Reid Poole - Trumpet
+    Tim Stombaugh - Drums
+    Matt Horanzy - Guitar
+    Steve Denny - Piano
+    Paul McDaniel - Bass
+  `;
 
   return (
     <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
@@ -29,27 +37,29 @@ export default function MusicPage() {
         {videos.map((video, index) => (
           <div
             key={video.id}
-            className={`flex flex-col ${
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            } items-center lg:justify-between gap-8`}
+            className={`border border-gray-700 rounded-lg p-6 bg-gray-800 shadow-lg ${
+              index % 2 === 0 ? "lg:flex lg:flex-row" : "lg:flex lg:flex-row-reverse"
+            } flex-col items-center gap-8`}
           >
             {/* Video */}
-            <div className="flex-1">
-              <div className="aspect-w-16 aspect-h-9 bg-black rounded-lg shadow-lg">
-                <iframe
-                  src={video.embedUrl}
-                  title={`Video ${video.id}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full rounded-lg"
-                ></iframe>
-              </div>
+            <div className="w-full lg:w-1/2">
+              <iframe
+                width="100%"
+                height="500px" // Increased height for videos
+                src={video.embedUrl}
+                title={`Video ${video.id}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="w-full rounded-lg"
+              ></iframe>
             </div>
 
-            {/* Description */}
-            <div className="flex-1 text-center lg:text-left">
-              <p className="text-lg text-gray-300 leading-relaxed">{video.description}</p>
+            {/* Description and Personnel */}
+            <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center lg:pl-8 lg:pr-8">
+              <p className="text-lg font-bold text-gray-300 mb-4">{video.description}</p>
+              <p className="text-sm text-gray-400 whitespace-pre-wrap">{personnel}</p>
             </div>
           </div>
         ))}

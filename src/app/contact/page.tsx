@@ -104,7 +104,7 @@ export default function ContactPage() {
         {status && <p className="text-center mt-4">{status}</p>}
       </form>
       <p className="text-center text-gray-300 mt-8">
-        Or Feel free to reach out to Reid Poole at:
+        Booking Contact - Reid Poole:
         <br />
         <span className="font-bold">719-332-2752</span>
         <br />

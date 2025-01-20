@@ -1,16 +1,26 @@
 "use client"
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(""); // To track submission status
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<string>("");
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Sending...");
 
@@ -25,20 +35,21 @@ export default function ContactPage() {
         setStatus("Email sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send email.");
+        const errorData = await response.json();
+        setStatus(`Failed to send email: ${errorData.message}`);
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error submitting form:", error);
       setStatus("Error sending email.");
     }
   };
-  
+
   return (
     <div className="mx-auto py-20 px-4 bg-gray-700">
       <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto bg-gray-100 text-black p-8 shadow-lg rounded-lg"
+        className="max-w-md mx-auto bg-gray-100 p-8 text-black shadow-lg rounded-lg"
       >
         <div className="mb-4">
           <label className="block font-bold mb-2" htmlFor="name">
@@ -92,7 +103,7 @@ export default function ContactPage() {
         </button>
         {status && <p className="text-center mt-4">{status}</p>}
       </form>
-      <p className="text-center text-gray-300 mb-8 mt-8">
+      <p className="text-center text-gray-300 mt-8">
         Or Feel free to reach out to Reid Poole at:
         <br />
         <span className="font-bold">719-332-2752</span>

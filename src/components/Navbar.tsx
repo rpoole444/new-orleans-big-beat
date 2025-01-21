@@ -24,7 +24,7 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          <div className="hidden m-4 lg:block text-lg font-semibold text-gray-300">
+          <div className="hidden m-4 lg:block text-lg font-semibold font-serif text-gray-300">
             Feel the Rhythm of New Orleans
           </div>
           {/* Hamburger Menu Button */}

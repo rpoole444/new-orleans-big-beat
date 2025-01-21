@@ -32,12 +32,12 @@ export default function MusicPage() {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
-      <h1 className="text-4xl font-bold text-center mb-10">Music</h1>
-      <div className="space-y-12">
+      <h1 className="text-5xl font-extrabold text-center mb-12 drop-shadow-lg">Music</h1>
+      <div className="space-y-16">
         {videos.map((video, index) => (
           <div
             key={video.id}
-            className={`border border-gray-700 rounded-lg p-6 bg-gray-800 shadow-lg ${
+            className={`border border-gray-600 rounded-lg p-8 bg-gray-800 shadow-lg ${
               index % 2 === 0 ? "lg:flex lg:flex-row" : "lg:flex lg:flex-row-reverse"
             } flex-col items-center gap-8`}
           >
@@ -57,9 +57,12 @@ export default function MusicPage() {
             </div>
 
             {/* Description and Personnel */}
+            
             <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center lg:pl-8 lg:pr-8">
-              <p className="text-lg font-bold text-gray-300 mb-4">{video.description}</p>
-              <p className="text-sm text-gray-400 whitespace-pre-wrap">{personnel}</p>
+              <p className="text-2xl font-semibold text-gray-300 mb-6 pt-4">{video.description}</p>
+              <div className="text-lg text-gray-400 whitespace-pre-wrap bg-gray-900 rounded-lg p-4 shadow-md">
+                {personnel}
+              </div>
             </div>
           </div>
         ))}

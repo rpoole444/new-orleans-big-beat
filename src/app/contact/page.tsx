@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 type FormData = {
@@ -45,71 +45,71 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="mx-auto py-20 px-4 bg-gray-700">
-      <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-md mx-auto bg-gray-100 p-8 text-black shadow-lg rounded-lg"
-      >
-        <div className="mb-4">
-          <label className="block font-bold mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-2 border rounded"
-            placeholder="Your Name"
-            required
-          />
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4 py-10">
+      <div className="w-full max-w-lg bg-white shadow-lg rounded-lg p-8">
+        <h1 className="text-4xl font-extrabold text-gray-800 text-center mb-6">Contact Us</h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-sm font-semibold text-gray-600 mb-2" htmlFor="name">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-600 mb-2" htmlFor="email">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-600 mb-2" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Your Message"
+              rows={4}
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-600 transition-all duration-200"
+          >
+            Send
+          </button>
+          {status && <p className="text-center text-sm mt-4 text-gray-600">{status}</p>}
+        </form>
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-600">
+            Booking Contact - <span className="font-bold text-gray-800">Reid Poole</span>
+          </p>
+          <p className="text-sm text-gray-600 font-bold">719-332-2752</p>
+          <p className="text-sm text-gray-600 font-bold">poole.reid@gmail.com</p>
         </div>
-        <div className="mb-4">
-          <label className="block font-bold mb-2" htmlFor="email">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 border rounded"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block font-bold mb-2" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full p-2 border rounded"
-            placeholder="Your Message"
-            required
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded"
-        >
-          Send
-        </button>
-        {status && <p className="text-center mt-4">{status}</p>}
-      </form>
-      <p className="text-center text-gray-300 mt-8">
-        Booking Contact - Reid Poole:
-        <br />
-        <span className="font-bold">719-332-2752</span>
-        <br />
-        <span className="font-bold">poole.reid@gmail.com</span>
-      </p>
+      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-<nav className="bg-gray-900 text-white py-4 shadow-lg" style={{ background: "linear-gradient(90deg, #1e293b, #3b82f6)" }}>
+<nav className="bg-gray-900 text-white py-4 shadow-lg" style={{ background: "linear-gradient(90deg,rgb(103, 37, 123) , #1e293b)" }}>
       <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
         {/* Header with Band Icon and Hamburger */}
         <div className="flex justify-between items-center">
@@ -20,7 +20,7 @@ export default function Navbar() {
                 alt={`Big Beat Band Icon`}
                 width={175}
                 height={175}
-                className="rounded-lg"
+                className="shadow-md rounded-lg border border-gray-300"
               />
             </Link>
           </div>

@@ -67,13 +67,13 @@ export default function BandPage() {
   };
   
   return (
-  <div className="bg-gray-800 text-white min-h-screen py-10 px-6">
+  <div className="bg-gray-900 text-white min-h-screen py-10 px-6">
     <h1 className="text-4xl font-bold text-center mb-10">Meet the Band</h1>
     <div className="space-y-12">
       {members.map((member) => (
         <div
           key={member.id}
-          className="bg-gray-600 max-w-md mx-auto rounded-lg shadow-md p-6 mb-6 border border-gray-300"
+          className="bg-gray-700 max-w-md mx-auto rounded-lg shadow-md p-6 mb-6 border border-gray-300"
         >
           {/* Top row: photo + name/instrument + toggle */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">

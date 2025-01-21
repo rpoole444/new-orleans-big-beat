@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       {/* Welcome Section */}
-      <div className="text-center py-20 bg-gradient-to-r from-gray-800 to-black text-white">
+      <div className="text-center py-20 bg-gradient-to-l from-gray-800 to-black text-white">
         <h1 className="text-5xl font-extrabold uppercase tracking-wide font-serif  drop-shadow-lg">
           Welcome to New Orleans Big Beat
         </h1>
